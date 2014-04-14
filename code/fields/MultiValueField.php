@@ -148,7 +148,7 @@ class MultiValueField extends DBField implements CompositeDBField {
 	 * @return string
 	 */
 	public function Implode($separator = ', ') {
-		return implode($separator, $this->getValue());
+		return implode($separator, (array)$this->getValue());
 	}
 	
 	public function Items() {
